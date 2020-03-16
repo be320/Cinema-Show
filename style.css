@@ -25,6 +25,7 @@ div.container {
   background: url(./images/back.jpg);
   background-attachment: scroll;
   background-repeat: no-repeat;
+
 }
 
 .body-overlay{
@@ -142,9 +143,10 @@ div.board{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: rgba(0,0,0,.87);
-    padding: 20px;
+    padding: 60px;
+    align-items: center;
 }
 
 div.movie {
@@ -180,6 +182,8 @@ div.rating{
 .bold-rating{
   font-weight: bolder;
   font-size: larger;
+  color: orange;
+  margin-right: 3px;
 }
 
 .rating-value{
@@ -332,4 +336,81 @@ div.google:hover {
 
 .register-button:hover{
  cursor: pointer;
+}
+
+.movie-structure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.portofolio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.details{
+  margin-left: 100px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.movie-title{
+  display: flex;
+  flex-direction: row;
+}
+
+.title-head{
+  color: white;
+  font-size: 40px;
+  font-family: fantasy;
+}
+
+.title-year{
+  color: #d52121;
+  font-size: 20px;
+  font-family: fantasy;
+  margin: 15px;
+}
+
+.trailer{
+  border: 5px solid #d52121;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.overview{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+
+h2{
+    font-family: 'OpenSans', sans-serif;
+      font-weight: 800;
+      clear: both;
+      line-height: 1;
+      font-size: 30px;
+      color: white;
+      margin-bottom: 20px;
+}
+
+.overview-body{
+  font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    float: left;
+    line-height: 1;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    margin-bottom: 30px;
 }
