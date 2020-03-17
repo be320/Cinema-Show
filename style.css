@@ -148,7 +148,6 @@ div.board{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(0,0,0,.87);
     padding: 60px;
     align-items: center;
     overflow-y:auto;
@@ -232,7 +231,7 @@ div.poster{
 }
 
 
-div.movie:hover  h6 { color: yellow; } 
+div.movie:hover  h6 { color: #d52121; } 
 
 div.movie:hover  .overlay { 
   opacity: 1;
@@ -425,6 +424,7 @@ h2{
     color: white;
     text-align: left;
     margin-bottom: 30px;
+    margin-left: 10px;
 }
 
 .cast{
@@ -451,6 +451,70 @@ h2{
   margin-left: 50px;
 }
 
+.review-head{
+  text-align: left;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review-card{
+  color: white;
+  border: 2px solid #d52121;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.reviewer-name{
+  color: #d52121;
+  font-size: 18px;
+  font-family: fantasy;
+}
+
+.stars{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+
+.rating-body{
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.overview-head{
+  margin-left: 10px;
+}
+
+div.review-button{
+  background-color: #d52121;
+  border-radius: 20px;
+  padding: 20px;
+  align-self: flex-end;
+  text-align: center;
+  align-items: flex-end;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+div.review-button:hover {
+  cursor: pointer;
+}
 
 
 ::-webkit-scrollbar-track {
