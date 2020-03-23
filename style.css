@@ -652,6 +652,46 @@ div#form-container{
   background-color: #d52121;
 }
 
+#star_0{
+  color: gray;
+}
+
+#star_1{
+  color: gray;
+}
+
+#star_2{
+  color: gray;
+}
+
+#star_3{
+  color: gray;
+}
+
+#star_4{
+  color: gray;
+}
+
+#star_5{
+  color: gray;
+}
+
+#star_6{
+  color: gray;
+}
+
+#star_7{
+  color: gray;
+}
+
+#star_8{
+  color: gray;
+}
+
+#star_9{
+  color: gray;
+}
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.87);
   border-radius: 10px;
