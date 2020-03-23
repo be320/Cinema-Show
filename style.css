@@ -625,6 +625,33 @@ div#form-container{
   background-color: rgba(0,0,0,0.9);
 }
 
+.pagination{
+  background-color: black;
+  min-height: 40px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  list-style-type: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: white;
+}
+
+#page{
+  background-color: #9c2a2a;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  font-size: large;
+}
+
+#page:hover{
+  cursor: pointer;
+  background-color: #d52121;
+}
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.87);
   border-radius: 10px;
