@@ -3,6 +3,7 @@ var reviewBtn = document.getElementById("review-button");
 var authForm = document.getElementById("form-container");
 var authButton = document.getElementById("cat-auth");
 var cancelReview = document.getElementById("cancel-review");
+var starsContainer = document.getElementById("stars")
 var stars=[];
 var rated = false;
 var rate_num =0;
@@ -12,6 +13,8 @@ authButton.onclick = function()
 {
   authForm.style.display="block";
 }
+
+
 
 window.onclick = function(event) {
   console.log('I am here')
@@ -28,6 +31,8 @@ for(let i=0;i<10;i++)
   stars[i] = document.getElementById("star_"+i);
   stars[i].style.cursor = "pointer";
 }
+
+
 
 
 for(let i=0;i<10;i++){
@@ -66,16 +71,7 @@ for(let i=0;i<10;i++){
         }
       }
     }
-  
-  
-
-
 }
-
-
-
-
-
 
 cancelReview.onclick = function(){
   myReview.style.display = "none";
@@ -84,6 +80,15 @@ cancelReview.onclick = function(){
 reviewBtn.onclick = function()
 {
     myReview.style.display = "block";
+}
+
+starsContainer.onmouseleave = function(){
+  for(let i=0;i<10;i++){
+    if(rated===false)
+    {
+    stars[i].style.color = "gray";
+    }
+  }
 }
 
 

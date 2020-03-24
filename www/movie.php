@@ -18,7 +18,7 @@
           height="150px"
           class="logo"
         />
-        <a href="board.html" class="cat">
+        <a href="board.php" class="cat">
                 Movies
         </a>
         
@@ -92,7 +92,7 @@
             <div class="your-review-title">
                 <h2>Share Your Rating:</h2>
             </div>
-             <div class="stars">
+             <div id="stars">
                 <i class="fa fa-star" id="star_0" style="font-size: 20px;margin-right: 10px;" ></i>
                 <i class="fa fa-star" id="star_1" style="font-size: 20px;margin-right: 10px;" ></i>
                 <i class="fa fa-star" id="star_2" style="font-size: 20px;margin-right: 10px;" ></i>
