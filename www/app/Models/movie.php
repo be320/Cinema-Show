@@ -12,6 +12,7 @@ class Movie
     protected $overview;
     protected $cast;
     protected $reviews;
+    protected $genre;
 
     public function getId(){
         return $this->id;
@@ -79,6 +80,14 @@ class Movie
 
     public function getReviews(){
         return $this->reviews;
+    }
+
+    public function setGenre($genre){
+        $this->genre = $genre;
+    }
+
+    public function getGenre(){
+        return $this->genre;
     }
 
 
