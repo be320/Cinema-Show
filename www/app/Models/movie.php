@@ -1,45 +1,55 @@
 <?php
 
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
 
 class Movie
 {
-    protected $id;
+    protected $MOVIEID;
+    protected $TMDBID;
     protected $name;
     protected $poster;
     protected $rating;
-    protected $releaseYear;
-    protected $trailer;
+    protected $MRELEASEYEAR;
+    protected $MTRAILER;
     protected $overview;
     protected $cast;
     protected $reviews;
     protected $genre;
+    protected $json;
 
-    public function getId(){
-        return $this->id;
+
+    public function init(){
+        $data = file_get_contents('https://api.themoviedb.org/3/movie/'.$this->TMDBID.'?api_key=5cb9111fd21bd9d8a642f4be717b3123&language=en-US');
+        $this->json = json_decode($data);
+    }
+    
+
+    public function getMovieid(){
+        return $this->MOVIEID;
     }
 
-    public function setName($name){
-        $this->name = $name;
+    public function getTmdbid(){
+        return $this->TMDBID;
     }
 
     public function getName(){
-        return $this->name;
+        return $this->json->original_title;
     }
 
-    public function setPoster($poster){
-        $this->poster = $poster;
-    }
 
     public function getPoster(){
-        return $this->poster;
+        return 'https://image.tmdb.org/t/p/w500'.$this->json->poster_path;
     }
 
-    public function setRating($rating){
-        $this->rating = $rating;
-    }
 
     public function getRating(){
-        return $this->rating;
+        return $this->json->vote_average;
     }
 
     public function setReleaseYear($releaseYear){

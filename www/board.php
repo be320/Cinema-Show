@@ -1,3 +1,7 @@
+<?php
+require_once(__DIR__.'/../www/app/Repository/MovieRepository.php');
+require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -79,31 +83,33 @@
         $title = "You";
         $rating = "9.4";
 
-        for ($i = 0; $i < 24; $i++) {
-          echo ('<a href="movie.php" class="movie">
-          <div class="poster">
-            <img
-              src= ' . $poster . '
-              width="170px"
-              height="260px"
-              class="poster-img"
-            />
-            <div class="overlay"></div>
-          </div>
-          <div class="title">
-            <h6>' . $title . '</h6>
-          </div>
-          <div class="rating">
-            <i
-              class="fa fa-star"
-              style="color:orange;font-size: 25px;margin-right: 10px;"
-            ></i>
-            <p class="rating-value">
-              <span class="bold-rating">' . $rating . '</span>/10
-            </p>
-          </div>
-        </a>');
-        }
+       foreach($movies as $movie){
+         $movie->init();
+        echo ('<a href="movie.php" class="movie">
+        <div class="poster">
+          <img
+            src= ' . $movie->getPoster() . '
+            width="170px"
+            height="260px"
+            class="poster-img"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="title">
+          <h6>' . $movie->getName() . '</h6>
+        </div>
+        <div class="rating">
+          <i
+            class="fa fa-star"
+            style="color:orange;font-size: 25px;margin-right: 10px;"
+          ></i>
+          <p class="rating-value">
+            <span class="bold-rating">' . $movie->getRating() . '</span>/10
+          </p>
+        </div>
+      </a>');
+       }
+
 
         ?>
       </div>

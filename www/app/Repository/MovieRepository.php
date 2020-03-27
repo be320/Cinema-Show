@@ -24,4 +24,32 @@ class MovieRepository
         }
         return $result;
     }
+
+    public function getAll(): array
+    {
+        $result=[];
+        try{
+            $db = DBConnection::connect();
+            $stmt = $db->prepare("SELECT * from movie");
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_CLASS,
+            Movie::class);
+            $result = $stmt->fetchAll();
+        }catch(PDOException $e){
+            echo $e->getMessage();
+            exit();
+        }
+        return $result;
+    }
+
+    // public function getByGenre($genreId){
+    //     $result = [];
+
+    //     try{
+    //         $db = DBConnection::connect();
+    //         $stmt = $db->prepare("SELECT ");
+    //     }
+    // }
+
+
 }
