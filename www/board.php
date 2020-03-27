@@ -85,7 +85,7 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
 
        foreach($movies as $movie){
          $movie->init();
-        echo ('<a href="movie.php" class="movie">
+        echo ('<a href="movie.php?id='.$movie->getMovieid().'" class="movie">
         <div class="poster">
           <img
             src= ' . $movie->getPoster() . '

@@ -6,13 +6,13 @@ class MovieRepository
 {
     protected $table = 'movie';
 
-    public function getById($id): Movie
+    public function getById($MOVIEID): Movie
     {
         $result = null;
         try{
             $db = DBConnection::connect();
-            $stmt = $db ->prepare("SELECT * FROM movie WHERE id=:id");
-            $stmt->bindValue(':id',$id);
+            $stmt = $db ->prepare("SELECT * FROM movie WHERE MOVIEID=:MOVIEID");
+            $stmt->bindValue(':MOVIEID',$MOVIEID);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_CLASS,Movie::class);
             $result = $stmt->fetch();

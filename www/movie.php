@@ -1,3 +1,19 @@
+<?php
+require_once(__DIR__.'/../www/app/Repository/MovieRepository.php');
+$movieRepo = new MovieRepository();
+$id = $_GET['id'];
+$movie = $movieRepo->getById($id);
+$movie->init();
+
+function debug_to_console($data) {
+  $output = $data;
+  if (is_array($output))
+      $output = implode(',', $output);
+
+  echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -117,22 +133,23 @@
         <div class="movie-structure">
             <div class="portofolio">
                 <div class="movie-poster">
-                   <img src="./images/you.jpg" width="330px" height="500px" class="poster-img"  />
+                   <img src= "<?php echo $movie->getPoster(); ?>" width="330px" height="500px" class="poster-img"  />
                 </div>
                 <div class="rating">
-                        <i class="fa fa-star" style="color:orange;font-size: 25px;margin-right: 10px;" ></i> <p class="rating-value"><span class="bold-rating">7.4</span>/10</p>
+                        <i class="fa fa-star" style="color:orange;font-size: 25px;margin-right: 10px;" ></i> <p class="rating-value"><span class="bold-rating"><?php echo $movie->getRating(); ?></span>/10</p>
                     </div>          
             </div>
             <div class="details">
                <div class="movie-title">
-                <h1 class="title-head">You</h1>
-                <p class="title-year">2018</p>
+                <h1 class="title-head"><?php echo $movie->getName(); ?></h1>
+                <p class="title-year"><?php echo $movie->getReleaseYear(); ?></p>
                </div>
-                    <iframe width="700" height="345" src="https://www.youtube.com/embed/srx7fSBwvF4" class="trailer" >
+                    <iframe width="700" height="345" src= <?php echo ('https://www.youtube.com/embed/'.$movie->getTrailer().''); ?>
+                     class="trailer" >
                     </iframe>  
               <div class="overview">
                 <h2 class="overview-head">Overview:</h2>
-                <h6 class="overview-body">When a brilliant bookstore manager crosses paths with an aspiring writer, he uses the internet and social media to gather the most intimate of details and get close to her. A charming and awkward crush quickly becomes obsession as he quietly and strategically removes every obstacle - and person - in his way.</h6>
+                <h6 class="overview-body"><?php echo $movie->getOverview(); ?></h6>
               </div> 
               <div class="cast">
                 <div class="cast-head">

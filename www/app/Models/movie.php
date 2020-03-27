@@ -1,12 +1,7 @@
 <?php
 
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
 
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
+
 
 class Movie
 {
@@ -52,28 +47,18 @@ class Movie
         return $this->json->vote_average;
     }
 
-    public function setReleaseYear($releaseYear){
-        $this->releaseYear = $releaseYear;
-    }
-
     public function getReleaseYear(){
-        return $this->releaseYear;
+        return $this->MRELEASEYEAR;
     }
 
-    public function setTrailer($trailer){
-        $this->trailer = $trailer;
-    }
 
     public function getTrailer(){
-        return $this->trailer;
+        return $this->MTRAILER;
     }
 
-    public function setOverview($overview){
-        $this->overview = $overview;
-    }
 
     public function getOverview(){
-        return $this->overview;
+        return $this->json->overview;
     }
 
     public function setCast($cast){
