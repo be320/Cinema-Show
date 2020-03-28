@@ -22,6 +22,8 @@ class Movie
     public function init(){
         $data = file_get_contents('https://api.themoviedb.org/3/movie/'.$this->TMDBID.'?api_key=5cb9111fd21bd9d8a642f4be717b3123&language=en-US');
         $this->json = json_decode($data);
+        $data = file_get_contents('https://api.themoviedb.org/3/movie/  '.$this->TMDBID.'/credits?api_key=5cb9111fd21bd9d8a642f4be717b3123');
+        $this->cast = json_decode($data);
     }
     
 
@@ -61,12 +63,9 @@ class Movie
         return $this->json->overview;
     }
 
-    public function setCast($cast){
-        $this->cast = $cast;
-    }
 
     public function getCast(){
-        return $this->cast;
+        return $this->cast->cast; //second cast is the name in the api
     }
 
     public function setReviews($reviews){

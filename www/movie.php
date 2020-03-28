@@ -155,52 +155,40 @@ function debug_to_console($data) {
                 <div class="cast-head">
                   <h2>Cast:</h2>
                 </div>
-                <div class="cast-list">
+                  
+              
+              <?php
+
+            $actors = $movie->getCast();
+            $i=0;
+            foreach($actors as $actor)
+            {
+
+              echo('
+              <div class="actor">
+              <div class="actor-img-div">
+            <img src= https://image.tmdb.org/t/p/w500' . $actor->profile_path . ' width="100px" height="150px" class="actor-img"  />
+              </div>
+              <div class="actor-name">
+                <h6 class="overview-body">' . $actor->name . '</h6>
+              </div>
+              <div class="actor-role">
+                <p class="title-year">( ' . $actor->character . ' )</p>
+              </div>
+            </div>
+              ');
+              $i++;
+              if($i==10)
+                break;
+            }
 
 
-                  <div class="actor">
-                    <div class="actor-img-div">
-              <img src="./images/joe.jpg" width="60px" height="90px" class="actor-img"  />
-                    </div>
-                    <div class="actor-name">
-                      <h6 class="overview-body">Penn Badgley</h6>
-                    </div>
-                    <div class="actor-role">
-                      <p class="title-year">( Joe Goldberg )</p>
-                    </div>
-                  </div>
+  
+                ?>
 
+</div>
 
-
-                  <div class="actor">
-                    <div class="actor-img-div">
-              <img src="./images/beck.jpg" width="60px" height="90px" class="actor-img"  />
-                    </div>
-                    <div class="actor-name">
-                      <h6 class="overview-body">Elizabeth Lail</h6>
-                    </div>
-                    <div class="actor-role">
-                      <p class="title-year">( Guinevere Beck )</p>
-                    </div>
-                  </div>
-
-
-
-                  <div class="actor">
-                    <div class="actor-img-div">
-              <img src="./images/candice.jpg" width="60px" height="90px" class="actor-img"  />
-                    </div>
-                    <div class="actor-name">
-                      <h6 class="overview-body">Ambyr Childers</h6>
-                    </div>
-                    <div class="actor-role">
-                      <p class="title-year">( Candace Stone )</p>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>   
+             
               
               <div class="reviews">
                 <div class="review-head">
