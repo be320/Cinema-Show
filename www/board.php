@@ -34,7 +34,12 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
       <div id="form-container">
         <div class="form">
           <img src="./images/auth-logo.PNG" alt="logo" width="200px" height="200px" class="logo" />
-          <div class="form-body">
+
+
+  
+
+
+          <div id="form-body">
             <div class="text-fields">
               <i class="fa fa-envelope" style="color:white;font-size: 25px;margin-right: 10px;"></i>
               <input type="email" placeholder="Email" class="auth-txt" />
@@ -43,7 +48,7 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
               <i class="fa fa-key" style="color:white;font-size: 25px;margin-right: 10px;"></i>
               <input type="password" placeholder="Password" class="auth-txt" />
             </div>
-            <div class="forgot-pass">
+            <div id="forgot-pass">
               Forgot Password ?
             </div>
             <div class="login-button-div">
@@ -62,9 +67,15 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
             </div>
             <div class="register-div">
               <p>Don't have Account ?</p>
-              <h3 class="register-button">Sign Up</h3>
+              <h3 class="register-button" id="switchToSignUp">Sign Up</h3>
             </div>
           </div>
+
+
+
+
+
+
         </div>
       </div>
 

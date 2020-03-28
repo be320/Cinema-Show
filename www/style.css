@@ -269,11 +269,11 @@
     margin-top: 20px;
   }
   
-  div.form-body{
+  div#form-body{
     margin-top: -20px;
   }
-  
-  div.forgot-pass{
+
+  div#forgot-pass{
     margin-top: 20px;
     margin-left: -170px;
     font-size: 18px;

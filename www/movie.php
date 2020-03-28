@@ -94,7 +94,7 @@ function debug_to_console($data) {
               </div>
               <div class="register-div">
                   <p>Don't have Account ?</p>
-                  <h3 class="register-button">Sign Up</h3>
+                  <h3 class="register-button" id="switchToSignUp">Sign Up</h3>
               </div>
               </div>
               </div>

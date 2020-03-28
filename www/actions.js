@@ -4,6 +4,9 @@ var authForm = document.getElementById("form-container");
 var authButton = document.getElementById("cat-auth");
 var cancelReview = document.getElementById("cancel-review");
 var starsContainer = document.getElementById("stars")
+var switchToSignUp = document.getElementById("switchToSignUp");
+var switchToLogin = document.getElementById("switchToLogin");
+var form = document.getElementById("forgot-pass");
 var stars=[];
 var rated = false;
 var rate_num =0;
@@ -14,6 +17,16 @@ authButton.onclick = function()
   authForm.style.display="block";
 }
 
+
+switchToSignUp.onclick = function()
+{
+ form.innerHTML= "hello";
+}
+
+switchToLogin.onclick = function()
+{
+  
+}
 
 
 window.onclick = function(event) {
