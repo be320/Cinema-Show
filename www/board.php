@@ -144,6 +144,6 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
     </div>
   </div>
 </body>
-<script src="actions.js"></script>
+<script src="boardActions.js"></script>
 
 </html>

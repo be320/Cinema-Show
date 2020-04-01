@@ -293,5 +293,5 @@ function debug_to_console($data) {
       </div>
     </div>
   </body>
-  <script src="actions.js"></script>
+  <script src="movieActions.js"></script>
 </html>
