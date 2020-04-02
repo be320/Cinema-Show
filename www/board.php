@@ -42,17 +42,17 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
           <div id="form-body">
             <div class="text-fields">
               <i class="fa fa-envelope" style="color:white;font-size: 25px;margin-right: 10px;"></i>
-              <input type="email" placeholder="Email" class="auth-txt" />
+              <input type="email" placeholder="Email" id="auth-txt-email" autocomplete="off" />
             </div>
             <div class="text-fields">
               <i class="fa fa-key" style="color:white;font-size: 25px;margin-right: 10px;"></i>
-              <input type="password" placeholder="Password" class="auth-txt" />
+              <input type="password" placeholder="Password" id="auth-txt-password" autocomplete="off" />
             </div>
             <div id="forgot-pass">
               Forgot Password ?
             </div>
             <div class="login-button-div">
-              <input type="submit" value="Login" class="login-button" />
+              <input type="submit" value="Login" id="login-button"  />
             </div>
             <div class="or">
               OR
@@ -78,6 +78,8 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
 
         </div>
       </div>
+
+      <script src="boardActions.js"></script>
 
       <div class="search">
         <input type="text" placeholder="Search..." class="search-txt" />
@@ -144,6 +146,6 @@ require_once(__DIR__.'/../www/app/Controllers/getMovies.php');
     </div>
   </div>
 </body>
-<script src="boardActions.js"></script>
+
 
 </html>

@@ -4,6 +4,14 @@ var authForm = document.getElementById("form-container");
 var authButton = document.getElementById("cat-auth");
 var cancelReview = document.getElementById("cancel-review");
 var starsContainer = document.getElementById("stars")
+var email = document.getElementById("auth-txt-email");
+var password = document.getElementById("auth-txt-password");
+var name = document.getElementById("auth-txt-name");
+var loginForm = document.getElementById("login-form-body");
+var signupForm = document.getElementById("signup-form-body");
+var switchToSignUp = document.getElementById("switchToSignUp");
+var switchToLogin = document.getElementById("switchToLogin");
+var reviewTextArea = document.getElementById("review-textarea");
 var stars=[];
 var rated = false;
 var rate_num =0;
@@ -11,13 +19,33 @@ var rate_num =0;
 
 authButton.onclick = function()
 {
+  name.value = "";
+  email.value = "";
+  password.value = "";
   authForm.style.display="block";
+}
+
+switchToLogin.onclick = function()
+{
+  name.value = "";
+  email.value = "";
+  password.value = "";
+  signupForm.style.display="none";
+  loginForm.style.display="block";
+}
+
+switchToSignUp.onclick = function()
+{
+  name.value = "";
+  email.value = "";
+  password.value = "";
+  loginForm.style.display="none";
+  signupForm.style.display="block";
 }
 
 
 
 window.onclick = function(event) {
-  console.log('I am here')
   if (event.target == authForm) {
       authForm.style.display = "none";
   }
@@ -79,6 +107,10 @@ cancelReview.onclick = function(){
 
 reviewBtn.onclick = function()
 {
+   reviewTextArea.value="";
+   for(let i=0;i<10;i++){
+    stars[i].style.color = "gray";
+  }
     myReview.style.display = "block";
 }
 

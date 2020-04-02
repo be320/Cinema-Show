@@ -256,7 +256,25 @@
     padding: 20px;
   }
   
-  .auth-txt {
+  #auth-txt-email {
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #d52121;
+    color: white;
+  }
+
+  #auth-txt-password {
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #d52121;
+    color: white;
+  }
+
+  #auth-txt-name {
     border: 2px solid white;
     border-radius: 30px;
     padding: 10px;
@@ -269,8 +287,13 @@
     margin-top: 20px;
   }
   
-  div#form-body{
+  div#login-form-body{
     margin-top: -20px;
+  }
+
+  div#signup-form-body{
+    margin-top: -20px;
+    display: none;
   }
 
   div#forgot-pass{
@@ -280,7 +303,7 @@
     color: white; 
   }
   
-  .login-button{
+  #login-button{
     background-color: white;
     color: #d52121;
     border: 2px solid white;
@@ -289,9 +312,25 @@
     width: 80%;
     padding: 10px;
     align-self: center;
-  }
+  } 
   
   .login-button-div{
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #signup-button{
+    background-color: white;
+    color: #d52121;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 20px;
+    width: 80%;
+    padding: 10px;
+    align-self: center;
+  } 
+  
+  .signup-button-div{
     margin-top: 20px;
     width: 100%;
   }

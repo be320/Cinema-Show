@@ -18,7 +18,7 @@ function debug_to_console($data) {
 <html>
   <head>
     <title>Cinema Show</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -60,26 +60,31 @@ function debug_to_console($data) {
                   height="200px"
                   class="logo"
                 />
-                <div class="form-body">
+
+
+
+
+
+                <div id="login-form-body">
                 <div class="text-fields">
                   <i
                     class="fa fa-envelope"
                     style="color:white;font-size: 25px;margin-right: 10px;"
                   ></i>
-                  <input type="email" placeholder="Email" class="auth-txt" />
+                  <input type="email" placeholder="Email" id="auth-txt-email" autocomplete="off" />
                 </div>
                 <div class="text-fields">
                   <i
                     class="fa fa-key"
                     style="color:white;font-size: 25px;margin-right: 10px;"
                   ></i>
-                  <input type="password" placeholder="Password" class="auth-txt"  />
+                  <input type="password" placeholder="Password" id="auth-txt-password" autocomplete="off" />
                 </div>
-                <div class="forgot-pass" >
+                <div id="forgot-pass" >
                   Forgot Password ?
                 </div>
                 <div class="login-button-div">
-                      <input type="submit" value="Login" class="login-button" />
+                      <input type="submit" value="Login" id="login-button" />
                 </div>
                 <div class="or">
                   OR
@@ -97,6 +102,59 @@ function debug_to_console($data) {
                   <h3 class="register-button" id="switchToSignUp">Sign Up</h3>
               </div>
               </div>
+
+
+
+
+
+              <div id="signup-form-body">
+              <div class="text-fields">
+                  <i
+                    class="fa fa-user"
+                    style="color:white;font-size: 25px;margin-right: 10px;"
+                  ></i>
+                  <input type="text" placeholder="Name" id="auth-txt-name" autocomplete="off" />
+                </div>
+                <div class="text-fields">
+                  <i
+                    class="fa fa-envelope"
+                    style="color:white;font-size: 25px;margin-right: 10px;"
+                  ></i>
+                  <input type="email" placeholder="Email" id="auth-txt-email" autocomplete="off" />
+                </div>
+                <div class="text-fields">
+                  <i
+                    class="fa fa-key"
+                    style="color:white;font-size: 25px;margin-right: 10px;"
+                  ></i>
+                  <input type="password" placeholder="Password" id="auth-txt-password" autocomplete="off" />
+                </div>
+                <div class="signup-button-div">
+                      <input type="submit" value="Sign Up" id="signup-button" />
+                </div>
+                <div class="or">
+                  OR
+                </div>
+                <div class="social">
+                <div class="facebook">
+                      <i class="fa fa-facebook" style="color:white;background-color: #3b5998;font-size: 20px;" ></i>
+                  </div>
+                  <div class="google">
+                          <i class="fa fa-google" style="color:#d52121;background-color: white;font-size: 20px;" ></i>
+                      </div>
+              </div>
+              <div class="register-div">
+                  <p>Already have account ?</p>
+                  <h3 class="register-button" id="switchToLogin">Login</h3>
+              </div>
+              </div>
+
+
+
+
+
+
+
               </div>
           </div>
         <div id="my-review-div">
@@ -104,7 +162,7 @@ function debug_to_console($data) {
             <div class="your-review-title">
                 <h2>Share Your Review:</h2>
             </div>
-            <textarea name="message" rows="5" cols="100" placeholder="Your Review ..."></textarea>
+            <textarea name="message" rows="5" cols="100" id="review-textarea" placeholder="Your Review ..."></textarea>
             <div class="your-review-title">
                 <h2>Share Your Rating:</h2>
             </div>
