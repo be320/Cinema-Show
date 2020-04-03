@@ -44,7 +44,7 @@ require_once(__DIR__ . './app/includes/sessionStart.php');
 
 
 
-        <form  id="NewUserForm" action="/www/app/Controllers/createUser.php" method="post" enctype="multipart/form-data"   >
+        <form  id="NewUserForm" action="/Cinema-Show/www/app/Controllers/createUser.php" method="post" enctype="multipart/form-data"   >
             <div id="signup-form-body">
                 <div class="text-fields">
                     <i class="fa fa-user" style="color:white;font-size: 25px;margin-right: 10px;"></i>
