@@ -298,9 +298,14 @@
 
   div#forgot-pass{
     margin-top: 20px;
-    margin-left: -170px;
+    margin-left: 30px;
     font-size: 18px;
     color: white; 
+    width:40%;
+  }
+
+  div#forgot-pass{
+    cursor: pointer;
   }
   
   #login-button{
@@ -312,12 +317,13 @@
     width: 80%;
     padding: 10px;
     align-self: center;
-  } 
-  
-  .login-button-div{
     margin-top: 20px;
-    width: 100%;
+  } 
+
+  #login-button{
+    cursor: pointer;
   }
+  
 
   #signup-button{
     background-color: white;
@@ -328,12 +334,13 @@
     width: 80%;
     padding: 10px;
     align-self: center;
-  } 
-  
-  .signup-button-div{
     margin-top: 20px;
-    width: 100%;
+  } 
+
+  #signup-button{
+    cursor: pointer;
   }
+
   
   .social{
     margin-top: 20px;
@@ -352,18 +359,18 @@
   
   .facebook {
     background-color: #3b5998;
-    border: 2px solid #3b5998;
-    min-width: 5%;
-    border-radius: 30px;
-    padding: 20px 20px;
+    border: 5px solid #3b5998;
+    min-width: 20px;
+    border-radius: 50%;
+    padding: 15px;
   }
   
   .google {
     background-color: white;
     border: 2px solid white;
-    min-width: 5%;
-    border-radius: 30px;
-    padding: 20px 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    padding: 15px;
   }
   
   div.facebook:hover {
