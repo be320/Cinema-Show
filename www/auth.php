@@ -9,15 +9,19 @@ require_once(__DIR__ . './app/includes/sessionStart.php');
         <img src="./images/auth-logo.PNG" alt="logo" width="200px" height="200px" class="logo" />
 
 
-        <form >
+        <form id="loginForm" method="post" action="/Cinema-Show/www/app/Controllers/login.php">
             <div id="login-form-body">
                 <div class="text-fields">
                     <i class="fa fa-envelope" style="color:white;font-size: 25px;margin-right: 10px;"></i>
-                    <input type="email" placeholder="Email" id="auth-txt-email" autocomplete="off" />
+                    <input type="email" placeholder="Email" id="auth-txt-email" autocomplete="off"
+                    name="email"
+                    required />
                 </div>
                 <div class="text-fields">
                     <i class="fa fa-key" style="color:white;font-size: 25px;margin-right: 10px;"></i>
-                    <input type="password" placeholder="Password" id="auth-txt-password" autocomplete="off" />
+                    <input type="password" placeholder="Password" id="auth-txt-password" autocomplete="off"
+                    name="password"
+                    required />
                 </div>
                 <div id="forgot-pass">
                     Forgot Password ?

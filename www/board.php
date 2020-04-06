@@ -38,6 +38,7 @@ require_once(__DIR__ . '/../www/app/Controllers/getMovies.php');
         $poster = "./images/you.jpg";
         $title = "You";
         $rating = "9.4";
+        $i = 0;
 
         foreach ($movies as $movie) {
           $movie->init();
@@ -64,6 +65,9 @@ require_once(__DIR__ . '/../www/app/Controllers/getMovies.php');
           </p>
         </div>
       </a>');
+      $i++;
+      if($i>5)
+      break;
         }
 
 
